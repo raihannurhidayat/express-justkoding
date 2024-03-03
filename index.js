@@ -3,6 +3,7 @@ const express = require("express");
 const routerCategories = require("./routers/router.categories.js");
 const routerProduct = require("./routers/router.product.js");
 const routerProfile = require("./routers/router.profile.js");
+const routerReview = require("./routers/router.review.js");
 const authRouter = require("./routers/authRouter.js");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
@@ -31,6 +32,7 @@ app.use("/api/v1/categories", routerCategories);
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/product", routerProduct);
 app.use("/api/v1/profile", routerProfile);
+app.use("/api/v1/review", routerReview);
 
 app.use(notFound);
 app.use(errorHandler);
